@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>GREENSKYFLY</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+        <link rel="stylesheet" href="css/style.css" />
+        
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="img/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="img/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="img/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll-polyfill/0.4.4/smoothscroll.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    </head>
+    <body
+        onload='if (window.location.href.substr(window.location.href.length - 6) == "#about") { introAboutLogoTransition(); }'
+    >
+        <!--navbar-->
+        <nav class="navbar glass">
+            <span>
+                <a href="#home" style="display: flex; align-items: center">
+                    <img class="img2" src="./img/logo.png" width="40" />
+                    <h1 class="logo">&nbsp;GREENSKYFLY</h1>
+                </a>
+            </span>
+            <ul class="nav-links">
+                <li><a href="#home" id="pri" class="active cir_border">Home</a></li>
+                <li><a href="#events" id="sec" class="cir_border">Innovations</a></li>
+                <li><a href="#explore" id="tri" class="cir_border">Carbon Footprint</a></li>
+                <li><a href="#airlines" id="tri" class="cir_border">Airlines</a></li>
+                <li><a href="#tours" id="quad" class="cir_border">Sustainability</a></li>
+                <li><a href="#about" id="quint" class="cir_border">Eco-Aviation</a></li>
+                <li><a href="#contact" id="hept" class="cir_border">Contact</a></li>
+                <li>
+                    <div>
+                        <input type="checkbox" class="checkbox dark" id="checkbox" />
+                        <label for="checkbox" class="label">
+                            <i class="fa fa-moon-o"></i>
+                            <i class="fa fa-sun-o"></i>
+                            <div class="ball"></div>
+                        </label>
+                    </div>
+                </li>
+            </ul>
+            <img src="./img/menu-btn.png" alt="" class="menu-btn" />
+        </nav>
+        <!--navbar-->
+
+        <header id="home">
+            <div class="header-content">
+                <h2 id="quote">Embrace Sustainable Skies</h2>
+                <div class="line"></div>
+                <h1>DISCOVER GREEN AVIATION</h1>
+                <a
+                    href="#about"
+                    class="ctn"
+                    onclick='removeall(); $("#quad").css("border", "2px solid whitesmoke"); $("#quad").css("border-radius", "20px");'
+                    >Learn more</a
+                >
+            </div>
+        </header>
+
+        <!--Events-->
+        <section class="events" id="events">
+            <div class="container">
+                <div class="title">
+                    <h1 class="dark">Innovative Green Aviation Technologies</h1>
+                    <div class="line"></div>
+                </div>
+                <div class="row">
+                    <article class="card col" data-aos="fade-up">
+                        <img class="card-img" src="./img/hydrogen.png" />
+                        <h4 class="dark">Hydrogen-Powered Aircraft</h4>
+                        <p class="font-color">
+                            Hydrogen planes emit only water vapor and are ideal for long flights. Challenges include safe hydrogen storage, large storage tanks due to low energy density, and fossil fuel dependency in production.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Hydrogen-powered_aircraft#:~:text=A%20hydrogen%2Dpowered%20aircraft%20is,to%20power%20an%20electric%20propulsor." class="ctn">All Details</a>
+                    </article>
+                    <article class="card col" data-aos="fade-up" data-aos-delay="100">
+                        <img src="./img/Removal-450.png" />
+                        <h4 class="dark">Electric Aircraft</h4>
+                        <p class="font-color">
+                            Electric planes reduce emissions and noise, perfect for short regional flights. Limited battery capacity restricts them to shorter routes, posing challenges in production and disposal.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Electric_aircraft" class="ctn">All Details</a>
+                    </article>
+                    <article class="card col" data-aos="fade-up" data-aos-delay="200">
+                        <img src="./img/Removal-662.png" />
+                        <h4 class="dark">Biofuel-Powered Aircraft</h4>
+                        <p class="font-color">
+                            Biofuel planes, using organic sources, cut greenhouse gases for both short and long flights. Scaling up biofuel production and sustainable sourcing are key challenges.
+                        </p>
+                        <a href="https://en.wikipedia.org/wiki/Aviation_biofuel" class="ctn">All Details</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!--Events-->
+
+        <!--Explore-->
+        <section class="explore" id="explore">
+            <div class="explore-content">
+                <!-- Link to cfp.html -->
+                <iframe src="cfp.html" frameborder="1" width="90%" height="500"></iframe>
+            </div>
+        </section>
+        <!--Explore-->
+
+        <!--airlines-->
+        <section class="airlines" id="airlines">
+            <div class="container">
+                <div class="title">
+                    <h1 class="dark">Airlines </h1>
+                    <div class="line"></div>
+                    <p>
+                        Some Airlines Are Using the Latest Technology to Make Their Planes Greener.<br />
+                To make flying more sustainable, airlines are investing in everything from electric fleets to biofuels.<br />
+                    </p>
+                </div>
+                <div class="row">
+                    <article class="card col" data-aos="fade-up">
+                        <img class="card-img" src="./img/hawaii.webp" />
+                        <h4 class="dark">Hawaii Airlines</h4>
+                        <p class="font-color">
+                            In May, Hawaiian Airlines announced partnership with REGENT to design 100-passenger electric “seagliders” by 2028.
+                        </p>
+                        <a href="https://newsroom.hawaiianairlines.com/blog/how-flying-with-hawaiian-airlines-got-even-greener" class="ctn">More Info</a>
+                    </article>
+                    <article class="card col" data-aos="fade-up" data-aos-delay="100">
+                        <img src="./img/united.webp" />
+                        <h4 class="dark">United Airlines</h4>
+                        <p class="font-color">
+                            It is the first U.S. airline to sign a purchase agreement with supersonic aviation start-up Boom Supersonic for 15 of the company's “Overture” planes. 
+                        </p>
+                        <a href="https://crreport.united.com/environmental-sustainability" class="ctn">More Info</a>
+                    </article>
+                    <article class="card col" data-aos="fade-up" data-aos-delay="200">
+                        <img src="./img/airnewzealand.webp" />
+                        <h4 class="dark">Air New Zealand</h4>
+                        <p class="font-color">
+                            New Zealand's national carrier, which launches one of the world's longest-haul flights, between New York and Auckland, this month, is laser-focused on sustainability. 
+                        </p>
+                        <a href="https://www.airnewzealand.com/sustainability" class="ctn">More Info</a>
+                    </article>
+                    <article class="card col" data-aos="fade-up" data-aos-delay="300">
+                        <img src="./img/singapore.webp"/>
+                        <h4 class="dark">Singapore Airlines</h4>
+                        <p class="font-color">
+                            Earlier this year, Singapore became the first airline to sign the Global SAF Declaration, a commitment to help spur the adoption of the alternative fuels.
+                        </p>
+                        <a href="https://www.singaporeair.com/en_UK/us/about-us/sustainability/" class="ctn">More Info</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <!-- airlines -->
+
+        <!--tours-->
+        <section class="tours" id="tours">
+            <div class="container row">
+                <div class="col content-col">
+                    <h1 class="font-color">INDIA'S PATH TO GREEN AVIATION</h1>
+                    <div class="line"></div>
+                    <p>
+                        India's aviation industry is rapidly embracing green practices, targeting net zero carbon emissions by 2050. <br />
+                        The focus is on sustainable aviation fuels (SAF) and fuel-efficient planes, with a goal of 10% SAF blend by 2030.<br />
+                        Key partnerships, such as Indian Oil Corporation and LanzaJet, highlight significant progress in this direction.
+                        <br />
+                        These initiatives not only address environmental concerns but also generate employment, establishing India as a leader in global green aviation efforts.
+                    </p>
+                    <a href="https://pib.gov.in/PressReleaseIframePage.aspx?PRID=1961797" class="ctn">Learn more</a>
+                </div>
+                <div class="image-container">
+                    <div class="image-wrapper">
+                        <img src="img/26-1.jpg" alt="Image 1">
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="img/airasia-india-operates-countrys-1st-commercial-flight-on-indigenous-sustainable-aviation-fuel.webp" alt="Image 2">
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="img/Screenshot 2023-11-03 at 4.03.51 PM.png" alt="Image 3">
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="img/news.webp" alt="Image 4">
+                    </div>
+                </div>
+                
+            <br /><br  /><br  /><br />   
+        </section>
+        <!--tours-->
+
+         <!-- Add gap here -->
+         <br /><br /> 
+         
+        <!-- About -->
+        <section id="about">
+            <div class="title">
+                <h1 class="font-color" style="text-align: center;">Greenification</h1>
+                <div class="line"></div>
+            </div>
+            <br />
+            <div id="about_us">
+                <div class="boxx">
+                    <div class="containerx">
+                        <input type="radio" name="slider" id="item-1" checked />
+<input type="radio" name="slider" id="item-2" />
+<input type="radio" name="slider" id="item-3" />
+
+<div class="cards">
+    <label class="cardt" for="item-1" id="col-img-1">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/kjOnl0L2zBg" frameborder="0" allowfullscreen></iframe>
+    </label>
+</div>
+
+
+                    </div>
+                    <span id="about-quad"
+                        ><a href="#home"
+                            ><center>
+                                <h1
+                                    style="
+                                        font-family: var(--ff-montserrat);
+                                        color: white;
+                                    "
+                                >
+                                Towards Net Zero:
+                                </h1>
+
+                                <h1 class="logo" style="font-size: 50px">
+                                    Green Aviation Initiatives in Focus
+                                </h1>
+                            </center>
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </section>
+        <!-- About -->
+
+        <!-- Testimonials -->
+        <section class="testimonials" id="testimonials">
+            <div class="container">
+                <div class="title">
+                    <h1 class="dark">What Our Users Say</h1>
+                    <div class="line"></div>
+                </div>
+                <div class="row">
+                    <article class="testimonial col" data-aos="fade-up">
+                        <p>"This website has been incredibly helpful in understanding green aviation technologies. Highly recommend!"</p>
+                        <h4>- Mukkisa Indhu Reddy</h4>
+                    </article>
+                    <article class="testimonial col" data-aos="fade-up" data-aos-delay="100">
+                        <p>"A fantastic resource for anyone interested in sustainable aviation. The carbon footprint calculator is a great tool."</p>
+                        <h4>- Adiya Shrivastva</h4>
+                    </article>
+                    <article class="testimonial col" data-aos="fade-up" data-aos-delay="200">
+                        <p>"I love the detailed information and the clean design. It's very user-friendly and informative."</p>
+                        <h4>- Anupam Singh</h4>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials -->
+
+        <!-- Newsletter Subscription -->
+        <section class="newsletter" id="newsletter">
+            <div class="container">
+                <div class="title">
+                    <h1 class="dark">Subscribe to Our Newsletter</h1>
+                    <div class="line"></div>
+                </div>
+                <form class="newsletter-form" data-aos="fade-up">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </section>
+        <!-- Newsletter Subscription -->
+
+        <!-- contact -->
+        <section id="contact">
+            <div class="title">
+                <h1 class="font-color">Contact Us</h1>
+                <div class="line"></div>
+            </div>
+            <div class="contact_us">
+                <form class="cform" action="" method="post">
+                    <div class="crow-message">
+                        <h1 class="color">Send us a message</h1>
+                        <div></div>
+                    </div>
+                    <div class="crow-in">
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Your name"
+                        />
+                        <input
+                            type="text"
+                            id="email"
+                            name="email"
+                            placeholder="Your Email id"
+                        />
+                    </div>
+                    <div class="crow">
+                        <div class="ccol-left">
+                            <select name="country" id="country">
+                                <option value="India">India</option>
+                                <option value="Russia">Russia</option>
+                                <option value="usa">USA</option>
+                                <option value="Japan">Japan</option>
+                                <option value="France">France</option>
+                                <option value="Brazil">Brazil</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="crow">
+                        <div class="ccol-left">
+                            <textarea
+                                type="text"
+                                id="remarks"
+                                name="remarks"
+                                placeholder="Your Remarks....."
+                                style="height: 150px"
+                            ></textarea>
+                        </div>
+                    </div>
+                    <div class="popup" onclick="myFunction()">Submit
+                        <span class="popuptext" id="myPopup">Your Response is submitted</span>
+                      </div>
+                </form>
+                <div class="cbox">
+                    <div>
+                        <p class="cbox-message">
+                            Prefer some other way ?<br />Reach us by using the
+                            details given below
+                        </p>
+                        <div class="cbox-line"></div>
+                    </div>
+                    <div class="c_boxx">
+                        <a href="mailto:abc@gmail.com"
+                            ><i class="fa fa-envelope"></i>
+                            Mail: kaushikhr2@gmail.com
+                        </a>
+                    </div>
+                    <div class="c_boxx">
+                        <a href="tel:+91-12345-67890"
+                            ><i class="fa fa-phone"></i>
+                            Phone: (+91) 8757052097
+                        </a>
+                    </div>
+                    <div class="c_boxx">
+                        <a href="#"
+                            ><i class="fa fa-map-marker"></i>
+                            Location: Mohali, India
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- contact  -->
+         
+        <!-- up scroll -->
+        <button onclick="topFunction()" id="upbtn" title="Go to top">Top</button>
+        <!-- end -->
+
+        <!--footer-->
+        <section class="footer">
+            <span
+                >Created By Rohit Kaushik | &#169; 2024 All rights
+                reserved.</span>
+            <div class="social-links">
+                <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
+            </div>
+        </section>
+        <!--footer-->
+
+        <script>
+            const menuBtn = document.querySelector(".menu-btn");
+            const navlinks = document.querySelector(".nav-links");
+
+            menuBtn.addEventListener("click", () => {
+                navlinks.classList.toggle("mobile-menu");
+            });
+
+            // Back to top button
+            const upBtn = document.getElementById("upbtn");
+            window.onscroll = function() {
+                scrollFunction();
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    upBtn.style.display = "block";
+                } else {
+                    upBtn.style.display = "none";
+                }
+            }
+
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+        </script>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="js/script.js"></script>
+        <script>
+            // When the user clicks on <div>, open the popup
+            function myFunction() {
+              var popup = document.getElementById("myPopup");
+              popup.classList.toggle("show");
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviation Carbon Footprint Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-image: url('https://wallpapercave.com/wp/wp2497023.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0; 
+            padding: 0; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #calculator {
+            max-width: 400px;
+            margin: 20px;
+            padding: 40px;
+            border: 1px solid black;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.9); 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #calculator h2 {
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        #calculator label {
+            display: block;
+            margin: 10px 0 5px;
+            font-size: 1em;
+            color: #333;
+        }
+
+        #calculator input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 5px 0 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        #calculator button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #50c556;
+            color: white;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #calculator button:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="calculator">
+        <h2>Aviation Carbon Footprint Calculator</h2>
+
+        <label for="distance">Flight Distance (in kilometers):</label>
+        <input type="number" id="distance" placeholder="Enter distance" required>
+
+        <label for="passengers">Number of Passengers:</label>
+        <input type="number" id="passengers" placeholder="Enter number of passengers" required>
+        
+        <button onclick="calculateCarbonFootprint()">Calculate</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function calculateCarbonFootprint() {
+            const distance = document.getElementById('distance').value;
+            const passengers = document.getElementById('passengers').value;
+
+            // Placeholder emission factor (gCO2 per passenger-kilometer)
+            const emissionFactor = 0.2;
+
+            const carbonFootprint = (distance * emissionFactor * passengers).toFixed(2);
+
+            const resultElement = document.getElementById('result');
+            resultElement.innerHTML = `<p>Carbon Footprint: ${carbonFootprint} gCO2</p>`;
+        }
+    </script>
+
+</body>
+
+</html>
